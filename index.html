@@ -55,34 +55,13 @@
       </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#hero"><i class="bi bi-house"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#home"><i class="bi bi-people"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#info"><i class="bi bi-calendar-check"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery"><i class="bi bi-image"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#rsvp"><i class="bi bi-box2-heart"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#disqus_thread"><i class="bi bi-chat"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="bottom-nav" id="bottomNav">
+      <a href="#hero"><i class="bi bi-house"></i></a>
+      <a href="#home"><i class="bi bi-people"></i></a>
+      <a href="#info"><i class="bi bi-calendar-check"></i></a>
+      <a href="#gallery"><i class="bi bi-image"></i></a>
+      <a href="#rsvp"><i class="bi bi-box2-heart"></i></a>
+      <a href="#disqus_thread"><i class="bi bi-chat"></i></a>
     </nav>
 
     <section id="introduction" class="introduction">
@@ -448,6 +427,28 @@
       const nameContainer = document.querySelector('.hero h4 span');
       nameContainer.innerText = name;
       document.querySelector('#nama').value = name;
+    </script>
+
+    <script>
+      // Show/hide bottom nav based on hero section visibility
+      const heroSection = document.getElementById('hero');
+      const bottomNav = document.getElementById('bottomNav');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Hero is visible, hide nav
+            bottomNav.classList.remove('visible');
+          } else {
+            // Hero is not visible, show nav
+            bottomNav.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1 // Nav appears when hero is less than 10% visible
+      });
+
+      observer.observe(heroSection);
     </script>
   </body>
 </html>
