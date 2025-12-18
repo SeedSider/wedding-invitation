@@ -812,8 +812,8 @@ body {
 }
 
 .rsvp-card .form-select option {
-    background: var(--bg);
-    color: white;
+    background: white;
+    color: black;
 }
 
 .btn-rsvp {
