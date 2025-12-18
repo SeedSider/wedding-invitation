@@ -17,17 +17,21 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
         <main>
-            <h4>Dear, <span></span></h4>
+            <span>PERNIKAHAN</span>
             <h1>
                 Sidiq & Nana
             </h1>
-            <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+            <p>Dear, <span></span></p>
             <a href="#introduction" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
         </main>
     </section>
@@ -84,75 +88,93 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
+            <span class="section-subtitle">We're Getting Married</span>
             <h2>Acara Pernikahan</h2>
-            <div class="simply-countdown"> </div>
+            <div class="ornament ornament-green">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
             <h3>Diselenggarakan pada 28 Desember 2025 di Desa Citta, Kecamatan Citta, Kabupaten Soppeng.</h3>
             <p>Oleh karena itu, dengan segala hormat kami bermaksud untuk mengundang Bapak/Ibu Saudara/i, untuk hadir pada pernikahan kami.</p>
           </div>
         </div>
       </div>
 
-      <div class="row couple">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-8 text-end">
-              <h3>Usman Sidiq</h3>
-              <p>blablabla</p>
-              <p>Putra bungsu dari Bpk. H.M.Zainuddin dan Ibu Hj. Muhaidah</p>
+      <div class="row couple justify-content-center">
+        <div class="col-lg-5 col-md-6 col-10">
+          <div class="couple-card">
+            <div class="couple-img-wrapper">
+              <img src="img/cowo.jpg" alt="Usman Sidiq">
             </div>
-            <div class="col-4">
-              <img src="img/cowo.jpg" alt="Usman Sidiq" class="img-responsive rounded-circle">
+            <div class="couple-info">
+              <h3>Usman Sidiq</h3>
+              <p class="couple-title">Mempelai Pria</p>
+              <p>Putra bungsu dari<br>Bpk. H.M.Zainuddin & Ibu Hj. Muhaidah</p>
             </div>
           </div>
         </div>
 
-        <span class="heart"><i class="bi bi-arrow-through-heart"></i></span>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-4">
-              <img src="img/cewe.jpg" alt="Nadhila Sari" class="img-responsive rounded-circle">
+        <div class="couple-heart">
+          <i class="bi bi-suit-heart-fill"></i>
+        </div>
+
+        <div class="col-lg-5 col-md-6 col-10">
+          <div class="couple-card">
+            <div class="couple-img-wrapper">
+              <img src="img/cewe.jpg" alt="Nadhila Sari">
             </div>
-            <div class="col-8">
+            <div class="couple-info">
               <h3>Nadhila Sari</h3>
-              <p>blablabla</p>
-              <p>Putri bungsu dari Bpk. H. Ismail dan Ibu Hj. Lete</p>
+              <p class="couple-title">Mempelai Wanita</p>
+              <p>Putri bungsu dari<br>Bpk. H. Ismail & Ibu Hj. Lete</p>
             </div>
           </div>
+        </div>
       </div>
     </section>
     <section id="info" class="info">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
+            <span class="section-subtitle">Save The Date</span>
             <h2>Informasi Acara</h2>
-            <p class="alamat">Alamat: Kediaman Alm. Bapak H. Muhammad Zainuddin (Mantan Imam Kecamatan Citta), Sebelah Utara Pasar Citta, Desa Citta, Kecamatan Citta, Kabupaten Soppeng</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d994.4734439723935!2d120.0304849!3d-4.4308821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbe03942f7be319%3A0x2f3b55d002f5464!2sApotek%20Usman%20Farma!5e0!3m2!1sen!2sid!4v1765851216248!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <a href="https://maps.app.goo.gl/ML6s293aFaYwwWbD8" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
-            <p class="description">Diharapkan untuk tidak salah alamat dan tanggal</p>
+            <div class="ornament ornament-light">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
+            <p class="alamat">Kediaman Alm. Bapak H. Muhammad Zainuddin (Mantan Imam Kecamatan Citta), Sebelah Utara Pasar Citta, Desa Citta, Kecamatan Citta, Kabupaten Soppeng</p>
+            <div class="map-wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d994.4734439723935!2d120.0304849!3d-4.4308821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbe03942f7be319%3A0x2f3b55d002f5464!2sApotek%20Usman%20Farma!5e0!3m2!1sen!2sid!4v1765851216248!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/ML6s293aFaYwwWbD8" target="_blank" class="btn btn-outline-light btn-sm my-3"><i class="bi bi-geo-alt me-2"></i>Buka di Google Maps</a>
           </div>
         </div>
 
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-4 col-10">
-            <div class="card text-center text-bg-light mb-5">
-              <div class="card-header">
-                Akad Nikah
+        <div class="row justify-content-center mt-5">
+          <div class="content-divider"></div>
+          <div class="simply-countdown"> </div>
+          <div class="content-divider"></div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-5 col-md-6 col-10">
+            <div class="event-card">
+              <div class="event-icon">
+                <i class="bi bi-heart"></i>
               </div>
-              <div class="card-body">
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <i class="bi bi-clock d-block"></i>
-                    <span>08.00 - 10.00</span>
-                  </div>
-                  <div class="col-md-6">
-                    <i class="bi bi-calendar-event d-block"></i>
-                    <span>Minggu, 28 Desember 2025</span>
-                  </div>
+              <h4>Akad Nikah</h4>
+              <div class="event-details">
+                <div class="event-detail">
+                  <i class="bi bi-calendar-heart"></i>
+                  <span>Minggu, 28 Desember 2025</span>
+                </div>
+                <div class="event-detail">
+                  <i class="bi bi-clock"></i>
+                  <span>08.00 - 10.00 WITA</span>
                 </div>
               </div>
-              <div class="card-footer">
-                Saat acara diharapkan untuk kondusif menjaga kekhidmatan 
-              </div>
+              <p class="event-note">Mohon untuk menjaga kekhidmatan acara</p>
             </div>
           </div>
         </div>
@@ -163,37 +185,57 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Memori Kisah Kami</span>
+            <span class="section-subtitle">Our Moments</span>
             <h2>Galeri Foto</h2>
-            <p>lorem ipsum</p>
+            <div class="ornament ornament-green">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
+            <p>Momen-momen indah perjalanan kisah cinta kami</p>
           </div>
+        </div>
 
-          <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
-            <div class="col mt-3">
-              <a href="img/gallery/1.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana 1" data-gallery="prewed-gallery">
-                <img src="img/gallery/thumbnail/1.jpg" alt="Sidiq & Nana 1" class="img-fluid w-100 rounded">
-              </a>
-            </div>
-            <div class="col mt-3">
-              <a href="img/gallery/2.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana 2" data-gallery="prewed-gallery">
-                <img src="img/gallery/thumbnail/2.jpg" alt="Sidiq & Nana 2" class="img-fluid w-100 rounded">
-              </a>
-            </div>
-            <div class="col mt-3">
-              <a href="img/gallery/3.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana 3" data-gallery="prewed-gallery">
-                <img src="img/gallery/thumbnail/3.jpg" alt="Sidiq & Nana 3" class="img-fluid w-100 rounded">
-              </a>
-            </div>
-            <div class="col mt-4">
-              <a href="img/gallery/4.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana 4" data-gallery="prewed-gallery">
-                <img src="img/gallery/thumbnail/4.jpg" alt="Sidiq & Nana 4" class="img-fluid w-100 rounded">
-              </a>
-            </div>
-            <div class="col mt-3">
-              <a href="img/gallery/5.avif" data-toggle="lightbox" data-caption="Sidiq & Nana 5" data-gallery="prewed-gallery">
-                <img src="img/gallery/thumbnail/5.jpg" alt="Sidiq & Nana 5" class="img-fluid w-100 rounded">
-              </a>
-            </div>
+        <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center g-4 mt-2">
+          <div class="col">
+            <a href="img/gallery/1.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana" data-gallery="prewed-gallery" class="gallery-item">
+              <img src="img/gallery/thumbnail/1.jpg" alt="Sidiq & Nana 1" class="img-fluid w-100">
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="img/gallery/2.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana" data-gallery="prewed-gallery" class="gallery-item">
+              <img src="img/gallery/thumbnail/2.jpg" alt="Sidiq & Nana 2" class="img-fluid w-100">
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="img/gallery/3.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana" data-gallery="prewed-gallery" class="gallery-item">
+              <img src="img/gallery/thumbnail/3.jpg" alt="Sidiq & Nana 3" class="img-fluid w-100">
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="img/gallery/4.jpg" data-toggle="lightbox" data-caption="Sidiq & Nana" data-gallery="prewed-gallery" class="gallery-item">
+              <img src="img/gallery/thumbnail/4.jpg" alt="Sidiq & Nana 4" class="img-fluid w-100">
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="img/gallery/5.avif" data-toggle="lightbox" data-caption="Sidiq & Nana" data-gallery="prewed-gallery" class="gallery-item">
+              <img src="img/gallery/thumbnail/5.jpg" alt="Sidiq & Nana 5" class="img-fluid w-100">
+              <div class="gallery-overlay">
+                <i class="bi bi-zoom-in"></i>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -203,32 +245,40 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
+            <span class="section-subtitle">RSVP</span>
             <h2>Konfirmasi Kehadiran</h2>
-            <p>Silahkan konfirmasi kehadiran Anda dengan mengisi form di bawah ini.</p>
+            <div class="ornament ornament-light">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
+            <p>Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada acara pernikahan kami.</p>
           </div>
         </div>
 
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbz6y2FOusr0x_5SCS5Gnv1jJN7mOZaGHEU-qJz-JAiqoN7BjqdJUPWkzDNECH4oAq3_/exec" class="row row-cols-md-auto g-3 align-items-center justify-content-center" id="my-form">
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="nama" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="nama" name="nama">
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-5 col-md-8 col-10">
+            <div class="rsvp-card">
+              <form method="POST" action="https://script.google.com/macros/s/AKfycbz6y2FOusr0x_5SCS5Gnv1jJN7mOZaGHEU-qJz-JAiqoN7BjqdJUPWkzDNECH4oAq3_/exec" id="my-form">
+                <div class="mb-4">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="mb-4">
+                  <label for="status" class="form-label">Konfirmasi Kehadiran</label>
+                  <select name="status" id="status" class="form-select">
+                    <option selected disabled>Pilih salah satu</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-rsvp w-100">
+                  <i class="bi bi-send me-2"></i>Kirim Konfirmasi
+                </button>
+              </form>
             </div>
           </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="status" class="form-label">Konfirmasi</label>
-              <select name="status" id="status" class="form-select">
-                <option selected>Pilih salah satu</option>
-                <option value="Hadir">Hadir</option>
-                <option value="Tidak Hadir">Tidak Hadir</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-12" style="margin-top: 35px;">
-            <button class="btn btn-primary">Kirim</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -236,47 +286,83 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Ungkapan Tanda Kasih</span>
+            <span class="section-subtitle">Wedding Gift</span>
             <h2>Kirim Hadiah</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo aliquam alias illum obcaecati atque odio in molestiae consequatur eius porro! Excepturi nisi quasi in! Consequatur nihil sequi similique quo non!</p>
+            <div class="ornament ornament-green">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
+            <p>Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih kepada kami, dapat melalui:</p>
           </div>
         </div>
-        <div class="row justify-content-center text-center">
-          <div class="col-md-6">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <div class="fw-bold">BNI</div>
-                0313861411 - Usman Sidiq
-              </li>
-              <li class="list-group-item">
-                <div class="fw-bold">BSI</div>
-                0313861411 - Usman Sidiq
-              </li>
-            </ul>
+        <div class="row justify-content-center text-center g-4 mt-2">
+          <div class="col-md-5 col-10">
+            <div class="gift-card">
+              <div class="gift-icon">
+                <i class="bi bi-bank"></i>
+              </div>
+              <h5>Bank BNI</h5>
+              <p class="gift-account">0313861411</p>
+              <p class="gift-name">a.n. Usman Sidiq</p>
+              <button class="btn btn-copy" onclick="copyToClipboard('0313861411')">
+                <i class="bi bi-clipboard me-2"></i>Salin Nomor
+              </button>
+            </div>
+          </div>
+          <div class="col-md-5 col-10">
+            <div class="gift-card">
+              <div class="gift-icon">
+                <i class="bi bi-bank"></i>
+              </div>
+              <h5>Bank BSI</h5>
+              <p class="gift-account">0313861411</p>
+              <p class="gift-name">a.n. Usman Sidiq</p>
+              <button class="btn btn-copy" onclick="copyToClipboard('0313861411')">
+                <i class="bi bi-clipboard me-2"></i>Salin Nomor
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-6">
-            <div id="disqus_thread"></div>
-              <script>
-                  /**
-                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                  /*
-                  var disqus_config = function () {
-                  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                  };
-                  */
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                  var d = document, s = d.createElement('script');
-                  s.src = 'https://seedsider.disqus.com/embed.js';
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                  })();
-              </script>
-              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <div class="row justify-content-center mt-5 pt-4">
+          <div class="col-md-8 col-10 text-center">
+            <span class="section-subtitle">Wishes</span>
+            <h2>Ucapan & Doa</h2>
+            <div class="ornament ornament-green">
+              <span></span>
+              <i class="bi bi-heart-fill"></i>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-8 col-10">
+            <div class="wishes-card">
+              <!-- Comment Form -->
+              <form id="wishes-form" class="wishes-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="wish-name" placeholder="Nama Anda" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" id="wish-message" rows="3" placeholder="Tulis ucapan & doa untuk kedua mempelai..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-wish">
+                  <i class="bi bi-send me-2"></i>Kirim Ucapan
+                </button>
+              </form>
+
+              <!-- Comments List -->
+              <div class="wishes-list" id="wishes-list">
+                <div class="wishes-loading">
+                  <div class="spinner-border text-pink" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p>Memuat ucapan...</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -284,19 +370,17 @@
 
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <small class="block">Copyright &copy; 2025 Sidiq. All Rights Reserved.</small>
-            <small class="block">Design by <a href="https://www.instagram.com/sidiq_usman13/" target="_blank">@sidiq_usman13</a>.</small>
-          
-            <ul class="mt-3">
-              <li>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-              </li>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h3 class="footer-title">Sidiq & Nana</h3>
+            <p class="footer-quote">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri."</p>
+            <div class="footer-divider"></div>
+            <p class="footer-thanks">Terima kasih atas doa dan ucapan yang telah diberikan.</p>
+            <ul class="footer-social">
+              <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="#"><i class="bi bi-facebook"></i></a></li>
             </ul>
+            <small class="footer-copyright">Copyright &copy; 2025 Sidiq & Nana. Made with <i class="bi bi-heart-fill"></i></small>
           </div>
         </div>
       </div>
@@ -416,7 +500,14 @@
           })
         });
       });
+    </script>
 
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Nomor rekening berhasil disalin!');
+        });
+      }
     </script>
 
     <script>
@@ -427,6 +518,7 @@
       const nameContainer = document.querySelector('.hero h4 span');
       nameContainer.innerText = name;
       document.querySelector('#nama').value = name;
+      document.querySelector('#wish-name').value = name;
     </script>
 
     <script>
@@ -449,6 +541,139 @@
       });
 
       observer.observe(heroSection);
+    </script>
+
+    <script>
+      // Firebase Configuration
+      // TODO: Replace with your Firebase config from Firebase Console
+      const firebaseConfig = {
+
+        apiKey: "AIzaSyDx1PMqML0WY3T0xrM_35dPT-6bC8g045w",
+        authDomain: "wedding-invitation-27a79.firebaseapp.com",
+        databaseURL: "https://wedding-invitation-27a79-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "wedding-invitation-27a79",
+        storageBucket: "wedding-invitation-27a79.firebasestorage.app",
+        messagingSenderId: "5032735670",
+        appId: "1:5032735670:web:eb72cfc37860f107564717",
+        measurementId: "G-YLZ7Y7YDMQ"
+        };
+
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+      const wishesRef = database.ref('wishes');
+
+      // DOM Elements
+      const wishesForm = document.getElementById('wishes-form');
+      const wishesList = document.getElementById('wishes-list');
+      const wishNameInput = document.getElementById('wish-name');
+      const wishMessageInput = document.getElementById('wish-message');
+
+      // Pre-fill name from URL parameter
+      if (name) {
+        wishNameInput.value = name;
+      }
+
+      // Format relative time
+      function timeAgo(timestamp) {
+        const seconds = Math.floor((Date.now() - timestamp) / 1000);
+
+        if (seconds < 60) return 'Baru saja';
+        if (seconds < 3600) return Math.floor(seconds / 60) + ' menit lalu';
+        if (seconds < 86400) return Math.floor(seconds / 3600) + ' jam lalu';
+        if (seconds < 604800) return Math.floor(seconds / 86400) + ' hari lalu';
+
+        const date = new Date(timestamp);
+        return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+      }
+
+      // Get initials from name
+      function getInitials(name) {
+        return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+      }
+
+      // Render a single wish
+      function renderWish(wish) {
+        return `
+          <div class="wish-item">
+            <div class="wish-avatar">${getInitials(wish.name)}</div>
+            <div class="wish-content">
+              <div class="wish-header">
+                <span class="wish-name">${wish.name}</span>
+                <span class="wish-time">${timeAgo(wish.timestamp)}</span>
+              </div>
+              <p class="wish-message">${wish.message}</p>
+            </div>
+          </div>
+        `;
+      }
+
+      // Load wishes from Firebase
+      function loadWishes() {
+        wishesRef.orderByChild('timestamp').on('value', (snapshot) => {
+          const wishes = [];
+          snapshot.forEach((child) => {
+            wishes.push(child.val());
+          });
+
+          // Reverse to show newest first
+          wishes.reverse();
+
+          if (wishes.length === 0) {
+            wishesList.innerHTML = `
+              <div class="wishes-empty">
+                <i class="bi bi-chat-heart"></i>
+                <p>Belum ada ucapan. Jadilah yang pertama!</p>
+              </div>
+            `;
+          } else {
+            wishesList.innerHTML = wishes.map(renderWish).join('');
+          }
+        }, (error) => {
+          console.error('Error loading wishes:', error);
+          wishesList.innerHTML = `
+            <div class="wishes-empty">
+              <i class="bi bi-exclamation-circle"></i>
+              <p>Gagal memuat ucapan. Silakan refresh halaman.</p>
+            </div>
+          `;
+        });
+      }
+
+      // Submit new wish
+      wishesForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const submitBtn = wishesForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        // Disable button while submitting
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Mengirim...';
+
+        const newWish = {
+          name: wishNameInput.value.trim(),
+          message: wishMessageInput.value.trim(),
+          timestamp: Date.now()
+        };
+
+        wishesRef.push(newWish)
+          .then(() => {
+            wishMessageInput.value = '';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          })
+          .catch((error) => {
+            console.error('Error submitting wish:', error);
+            alert('Gagal mengirim ucapan. Silakan coba lagi.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          });
+      });
+
+      // Load wishes on page load
+      loadWishes();
     </script>
   </body>
 </html>
