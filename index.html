@@ -511,14 +511,48 @@
     </script>
 
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const name = urlParams.get('name') || '';
-      console.log(name);
+      // Handle URL parameters for GitHub Pages (works with both ? and # params)
+      function getGuestName() {
+        // Try query string first (?name=)
+        let urlParams = new URLSearchParams(window.location.search);
+        let name = urlParams.get('name');
 
-      const nameContainer = document.querySelector('.hero h4 span');
-      nameContainer.innerText = name;
-      document.querySelector('#nama').value = name;
-      document.querySelector('#wish-name').value = name;
+        // If not found, try hash parameters (#name= or #?name=)
+        if (!name && window.location.hash) {
+          const hash = window.location.hash.substring(1); // Remove #
+          // Handle both #name=John and #?name=John formats
+          if (hash.startsWith('?')) {
+            urlParams = new URLSearchParams(hash.substring(1));
+          } else {
+            urlParams = new URLSearchParams(hash);
+          }
+          name = urlParams.get('name');
+        }
+
+        // Also try pathname for /name/John format (some GitHub Pages setups)
+        if (!name) {
+          const pathParts = window.location.pathname.split('/').filter(p => p);
+          const nameIndex = pathParts.indexOf('name');
+          if (nameIndex !== -1 && pathParts[nameIndex + 1]) {
+            name = decodeURIComponent(pathParts[nameIndex + 1]);
+          }
+        }
+
+        return name || '';
+      }
+
+      const name = getGuestName();
+      console.log('Guest name:', name);
+
+      // Update all name fields
+      const heroNameSpan = document.querySelector('.hero p span') || document.querySelector('.hero h4 span');
+      if (heroNameSpan) heroNameSpan.innerText = name;
+
+      const namaInput = document.querySelector('#nama');
+      if (namaInput) namaInput.value = name;
+
+      const wishNameInput = document.querySelector('#wish-name');
+      if (wishNameInput) wishNameInput.value = name;
     </script>
 
     <script>
